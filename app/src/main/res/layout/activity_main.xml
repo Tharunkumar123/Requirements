@@ -35,6 +35,28 @@
 
                 <include layout="@layout/toolbar_layout" />
 
+
+                <com.example.requirements.NavigationTabBar
+                    android:id="@+id/ntb_sample_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    app:ntb_animation_duration="300"
+                    app:ntb_corners_radius="25dp"
+                    app:ntb_titled="true"
+                    app:ntb_icon_size_fraction="0"
+                    app:ntb_preview_colors="@array/red_wine"
+                    app:ntb_title_size="16sp"
+
+                    app:ntb_title_mode="all"
+                    app:ntb_scaled="false"
+                    app:ntb_active_color="#FFFFFF"
+                    app:ntb_inactive_color="#333333"
+                    app:ntb_bg_color="#D6D6D6"/>
+
+
                 <TextView
                     android:id="@+id/tvMode"
                     android:layout_width="match_parent"

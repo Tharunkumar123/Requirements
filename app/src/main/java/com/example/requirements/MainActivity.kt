@@ -7,12 +7,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.requirements.base.BaseActivity
-import com.jaeger.library.StatusBarUtil
 import com.king.view.superslidingpanelayout.SuperSlidingPaneLayout
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
-import kotlin.math.log
+import java.util.*
 
 class MainActivity : BaseActivity() {
     val totalCorners = 30f
@@ -43,7 +44,7 @@ class MainActivity : BaseActivity() {
 
         }
 
-
+navigationTabLayout()
         superSlidingPaneLayout.setPanelSlideListener(object :
             SuperSlidingPaneLayout.PanelSlideListener {
             override fun onPanelSlide(panel: View?, slideOffset: Float) {
@@ -65,6 +66,32 @@ class MainActivity : BaseActivity() {
 
         })
 
+
+    }
+
+    private fun navigationTabLayout() {
+        val ntbSample5 =
+            findViewById<View>(R.id.ntb_sample_5) as NavigationTabBar
+        val models5 =
+            ArrayList<NavigationTabBar.Model>()
+
+        models5.add(
+            NavigationTabBar.Model.Builder(
+               Color.parseColor("#FF6F00")
+            ).title("jdshgdi").build()
+        )
+        models5.add(
+            NavigationTabBar.Model.Builder(
+            Color.parseColor("#FF6F00")
+            ).title("jdshgdi").build()
+        )
+        models5.add(
+            NavigationTabBar.Model.Builder(
+              Color.parseColor("#FF6F00")
+            ).title("jdshgdi").build()
+        )
+        ntbSample5.models = models5
+        ntbSample5.setModelIndex(0, true)
 
     }
 

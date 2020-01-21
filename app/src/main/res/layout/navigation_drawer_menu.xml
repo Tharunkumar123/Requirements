@@ -7,15 +7,14 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="200dp"-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/dp"
 
-<!--        android:gravity="center"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/dp"-->
-<!--        -->
-<!--        />-->
+        />
 
     <TextView
         android:layout_width="match_parent"
