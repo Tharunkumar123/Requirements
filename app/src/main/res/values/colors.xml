@@ -11,4 +11,5 @@
         <item>#ffa10a37</item>
         <item>#ffbf013b</item>
     </string-array>
+    <color name="black_20">#33000000</color>
 </resources>

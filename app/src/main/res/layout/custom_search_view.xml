@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10dp"
+    android:background="@color/black_20">
+
+    <com.example.requirements.editTextSearchView.ClearableEditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="@dimen/_12dp"
+        android:paddingRight="@dimen/_12dp"
+        android:paddingTop="@dimen/_7dp"
+        android:paddingBottom="@dimen/_7dp"
+        android:inputType="textCapSentences"
+        android:hint="Type Company Name/ Tag Name "
+        style="@style/small_text_bold"
+        android:textSize="@dimen/_13sp"
+        android:background="@drawable/search_view_bg"/>
+
+</LinearLayout>
