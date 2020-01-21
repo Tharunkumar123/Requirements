@@ -1,6 +1,7 @@
 package com.example.requirements
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.requirements.base.BaseActivity
+import com.example.requirements.editTextSearchView.SearchViewActivity
 import com.king.view.superslidingpanelayout.SuperSlidingPaneLayout
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,7 +28,7 @@ class MainActivity : BaseActivity() {
         Log.v("MAIN ACTIVITY", "fadecolour set" )
         superSlidingPaneLayout.sliderFadeColor = 0
 
-
+        clickListener()
 
         if (Build.VERSION.SDK_INT in 19..20) {
             setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true)
@@ -67,6 +69,12 @@ navigationTabLayout()
         })
 
 
+    }
+
+    private fun clickListener() {
+        editTextSearch.setOnClickListener {
+            startActivity(Intent(this@MainActivity, SearchViewActivity::class.java))
+        }
     }
 
     private fun navigationTabLayout() {
