@@ -78,17 +78,17 @@ navigationTabLayout()
         models5.add(
             NavigationTabBar.Model.Builder(
                Color.parseColor("#FF6F00")
-            ).title("jdshgdi").build()
+            ).title("Cat").build()
         )
         models5.add(
             NavigationTabBar.Model.Builder(
             Color.parseColor("#FF6F00")
-            ).title("jdshgdi").build()
+            ).title("Dog").build()
         )
         models5.add(
             NavigationTabBar.Model.Builder(
               Color.parseColor("#FF6F00")
-            ).title("jdshgdi").build()
+            ).title("Lion").build()
         )
         ntbSample5.models = models5
         ntbSample5.setModelIndex(0, true)
