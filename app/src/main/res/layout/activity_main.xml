@@ -36,7 +36,7 @@
                 <include layout="@layout/toolbar_layout" />
 
 
-                <com.example.requirements.NavigationTabBar
+                <com.example.requirements.navigationTabBar.NavigationTabBar
                     android:id="@+id/ntb_sample_5"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -61,6 +61,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="goto Custom Edit Text widget"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_40dp"/>
+
+                <Button
+                    android:id="@+id/calendarWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="goto Custom Calendar widget"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_40dp"/>
 

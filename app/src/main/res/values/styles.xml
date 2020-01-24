@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
@@ -95,4 +95,13 @@
         <item>@string/helveticaneue_lightitalic</item>
         <item>@string/helveticaneue_medium</item>
     </string-array>
+
+    <declare-styleable name="DatePickerClass">
+        <attr name="setTextHint" format="string"/>
+        <attr name="textColorHint" format="color"/>
+    </declare-styleable>
+
+    <style name="HintTextStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

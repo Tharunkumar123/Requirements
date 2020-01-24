@@ -5,7 +5,7 @@
     android:padding="@dimen/_10dp"
     android:background="@color/black_20">
 
-    <com.example.requirements.editTextSearchView.ClearableEditText
+    <com.example.requirements.widgets.ClearableEditText
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.requirements;
+package com.example.requirements.navigationTabBar;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;

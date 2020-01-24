@@ -8,9 +8,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.Toast
 import com.example.requirements.base.BaseActivity
+import com.example.requirements.datePicker.DatePickerActivity
 import com.example.requirements.editTextSearchView.SearchViewActivity
+import com.example.requirements.navigationTabBar.NavigationTabBar
 import com.king.view.superslidingpanelayout.SuperSlidingPaneLayout
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,7 +26,7 @@ class MainActivity : BaseActivity() {
 
     @SuppressLint("ObsoleteSdkInt")
     override fun initView(savedInstanceState: Bundle?) {
-        Log.v("MAIN ACTIVITY", "fadecolour set" )
+        Log.v("MAIN ACTIVITY", "fadecolour set")
         superSlidingPaneLayout.sliderFadeColor = 0
 
         clickListener()
@@ -41,39 +42,39 @@ class MainActivity : BaseActivity() {
             setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
             window.statusBarColor = Color.TRANSPARENT
         }
-        btnLeft.setOnClickListener {
-            superSlidingPaneLayout.openPane()
 
-        }
+        navigationTabLayout()
 
-navigationTabLayout()
         superSlidingPaneLayout.setPanelSlideListener(object :
             SuperSlidingPaneLayout.PanelSlideListener {
             override fun onPanelSlide(panel: View?, slideOffset: Float) {
-                Log.v("MAIN ACTIVITY", "onPanelSlide" )
-                if (slideOffset>0.1f)
-                setCorners(slideOffset)
+                Log.v("MAIN ACTIVITY", "onPanelSlide")
+                if (slideOffset > 0.1f)
+                    setCorners(slideOffset)
 //                mainLayoutCard.radius = 0f
             }
 
             override fun onPanelClosed(panel: View?) {
-                Log.v("MAIN ACTIVITY", "onPanelClosed" )
+                Log.v("MAIN ACTIVITY", "onPanelClosed")
                 mainLayoutCard.radius = 0f
             }
 
             override fun onPanelOpened(panel: View?) {
-                Log.v("MAIN ACTIVITY", "drawer opened" )
+                Log.v("MAIN ACTIVITY", "drawer opened")
                 mainLayoutCard.radius = totalCorners
             }
-
         })
-
-
     }
 
     private fun clickListener() {
+        btnLeft.setOnClickListener {
+            superSlidingPaneLayout.openPane()
+        }
         editTextSearch.setOnClickListener {
             startActivity(Intent(this@MainActivity, SearchViewActivity::class.java))
+        }
+        calendarWidget.setOnClickListener {
+            startActivity(Intent(this@MainActivity, DatePickerActivity::class.java))
         }
     }
 
@@ -85,17 +86,17 @@ navigationTabLayout()
 
         models5.add(
             NavigationTabBar.Model.Builder(
-               Color.parseColor("#FF6F00")
+                Color.parseColor("#FF6F00")
             ).title("Cat").build()
         )
         models5.add(
             NavigationTabBar.Model.Builder(
-            Color.parseColor("#FF6F00")
+                Color.parseColor("#FF6F00")
             ).title("Dog").build()
         )
         models5.add(
             NavigationTabBar.Model.Builder(
-              Color.parseColor("#FF6F00")
+                Color.parseColor("#FF6F00")
             ).title("Lion").build()
         )
         ntbSample5.models = models5
@@ -104,21 +105,19 @@ navigationTabLayout()
     }
 
     private fun setCorners(slideOffset: Float) {
-
         val percentage = slideOffset * 100
         val cornerValue = (totalCorners * percentage) / 100
         mainLayoutCard.radius = cornerValue
-
     }
 
     private fun setWindowFlag(bits: Int, on: Boolean) {
         val win = window
         val winParams = win.attributes
         if (on) {
-            Log.v("MAIN ACTIVITY", "window flag 1 " )
+            Log.v("MAIN ACTIVITY", "window flag 1 ")
             winParams.flags = winParams.flags or bits
         } else {
-            Log.v("MAIN ACTIVITY", "window flag 2" )
+            Log.v("MAIN ACTIVITY", "window flag 2")
             winParams.flags = winParams.flags and bits.inv()
         }
         win.attributes = winParams

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <com.example.requirements.widgets.DatePickerClass
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_date"
+            android:editable="false"
+            app:setTextHint="From"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_15dp"
+            app:layout_constraintEnd_toStartOf="@id/to"/>
+
+
+        <com.example.requirements.widgets.DatePickerClass
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_date"
+            android:editable="false"
+            app:setTextHint="To"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_15dp"
+            app:layout_constraintStart_toEndOf="@id/from" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/addEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:src="@drawable/ic_date"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

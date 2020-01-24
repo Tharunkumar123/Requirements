@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.requirements;
+package com.example.requirements.navigationTabBar;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -54,6 +54,8 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 import androidx.viewpager.widget.ViewPager;
+
+import com.example.requirements.R;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.requirements.editTextSearchView
+package com.example.requirements.widgets
 
 import android.content.Context
 import android.text.Editable
