@@ -10,10 +10,10 @@
         </shape>
     </item>
     <item
-        android:bottom="3dp"
-        android:left="3dp"
-        android:right="3dp"
-        android:top="0.5dp">
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="14dp">
         <shape>
             <solid android:color="#FFFFFF" />
             <corners android:bottomRightRadius="7dp"
